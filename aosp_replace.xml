@@ -40,7 +40,6 @@
 	<remove-project name="platform/hardware/libhardware" />
 	<remove-project name="platform/hardware/libhardware_legacy" />
 	<remove-project name="platform/hardware/qcom/gps" />
-	<remove-project name="platform/hardware/qcom/wlan" />
 	<remove-project name="platform/packages/apps/Camera2" />
 	<remove-project name="platform/packages/apps/Gallery2" />
 	<remove-project name="platform/packages/apps/Settings" />
@@ -58,6 +57,7 @@
 	<remove-project name="platform/hardware/qcom/bt" />
 	<remove-project name="platform/hardware/qcom/display" />
 	<remove-project name="platform/hardware/qcom/media" />
+	<remove-project name="platform/hardware/qcom/wlan" />
 	<remove-project name="platform/hardware/ril" />
 
 
@@ -73,7 +73,6 @@
 	<project path="hardware/libhardware_legacy" name="AOSP-8916/hardware_libhardware_legacy" revision="oreo" remote="ME" />
 	<project path="hardware/qcom/fm" name="AOSP-8916/hardware_qcom_fm" revision="oreo" remote="ME" />
 	<project path="hardware/qcom/gps" name="AOSP-8916/hardware_qcom_gps" revision="oreo" remote="ME" />
-	<project path="hardware/qcom/wlan-caf" name="AOSP-8916/hardware_qcom_wlan" revision="oreo" remote="ME" />
 	<project path="packages/apps/Camera2" name="AOSP-8916/packages_apps_Camera2" revision="oreo" remote="ME" />
 	<project path="packages/apps/Gallery2" name="AOSP-8916/packages_apps_Gallery2" revision="oreo" remote="ME" />
 	<project path="packages/apps/Settings" name="AOSP-8916/packages_apps_Settings" revision="oreo" remote="ME" />
@@ -92,6 +91,7 @@
 	<project path="hardware/qcom/audio-caf/msm8916" name="ROM-FIXES/android_hardware_qcom_audio" revision="lineage-15.0-caf-8916" remote="ME" />
 	<project path="hardware/qcom/display-caf/msm8916" name="ROM-FIXES/android_hardware_qcom_display" revision="lineage-15.0-caf-8916" remote="ME" />
 	<project path="hardware/qcom/media-caf/msm8916" name="ROM-FIXES/android_hardware_qcom_media" revision="lineage-15.0-caf-8916" remote="ME" />
+	<project path="hardware/qcom/wlan-caf" name="AOSP-8916/hardware_qcom_wlan" revision="oreo" remote="ME" />
 	<project path="hardware/ril-caf" name="AOSP-8916/android_hardware_ril" revision="oreo" remote="ME" />
 	<project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" revision="lineage-15.0" remote="ME"  />
 </manifest>
