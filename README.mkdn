@@ -6,11 +6,11 @@ familiar with [Git and Repo](https://source.android.com/source/using-repo.html).
 
 To initialize your local repository using the AOSP trees, use a command like this:
 
-    repo init -u https://android.googlesource.com/platform/manifest -b android-8.0.0_r10
+    repo init -u https://android.googlesource.com/platform/manifest -b android-8.0.0_r11
     
 OR, for those with limited bandwidth/storage:
 
-    repo init -u https://android.googlesource.com/platform/manifest --depth=1 -b android-8.0.0_r10
+    repo init -u https://android.googlesource.com/platform/manifest --depth=1 -b android-8.0.0_r11
 
 Now create a local_manifests dir
 
