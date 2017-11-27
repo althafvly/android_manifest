@@ -6,11 +6,11 @@ familiar with [Git and Repo](https://source.android.com/source/using-repo.html).
 
 To initialize your local repository using the AOSP trees, use a command like this:
 
-    repo init -u https://android.googlesource.com/platform/manifest -b android-8.0.0_r17
+    repo init -u https://android.googlesource.com/platform/manifest -b android-8.0.0_r34
     
 OR, for those with limited bandwidth/storage:
 
-    repo init -u https://android.googlesource.com/platform/manifest --depth=1 -b android-8.0.0_r17
+    repo init -u https://android.googlesource.com/platform/manifest --depth=1 -b android-8.0.0_r34
 
 Now create a local_manifests dir
 
@@ -18,8 +18,8 @@ Now create a local_manifests dir
 
 Copy the required manifests in that folder.
 
-    wget -O .repo/local_manifests/aosp_remove.xml 'https://raw.githubusercontent.com/AOSP-8916/android_manifest/master/aosp_remove.xml'
-    wget -O .repo/local_manifests/aosp_replace.xml 'https://raw.githubusercontent.com/AOSP-8916/android_manifest/master/aosp_replace.xml'
+    wget -O .repo/local_manifests/aosp_remove.xml 'https://raw.githubusercontent.com/althafvly/android_manifest/master/aosp_remove.xml'
+    wget -O .repo/local_manifests/aosp_replace.xml 'https://raw.githubusercontent.com/althafvly/android_manifest/master/aosp_replace.xml'
 Add your device specific manifest there too.
 
 Then to sync up:
