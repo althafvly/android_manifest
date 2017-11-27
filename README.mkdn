@@ -20,6 +20,7 @@ Copy the required manifests in that folder.
 
     wget -O .repo/local_manifests/aosp_remove.xml 'https://raw.githubusercontent.com/althafvly/android_manifest/master/aosp_remove.xml'
     wget -O .repo/local_manifests/aosp_replace.xml 'https://raw.githubusercontent.com/althafvly/android_manifest/master/aosp_replace.xml'
+    wget -O .repo/local_manifests/osprey.xml 'https://raw.githubusercontent.com/althafvly/android_manifest/master/osprey.xml'
 Add your device specific manifest there too.
 
 Then to sync up:
