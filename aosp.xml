@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Remote names -->
+    <remote name="ME" fetch="ssh://git@github.com" />
+    <!-- Using a custom CM remote to avoid editing and editing of this file -->
+    <remote name="losgit" fetch="http://github.com/LineageOS" />
+    <!-- muppets remote just in case -->
+    <remote name="tehmuppets" fetch="http://github.com/themuppets" />
+
+
+    <!-- Building stuff -->
+    <remove-project name="platform/build" />
+    <remove-project name="platform/build/kati" />
+    <remove-project name="platform/build/soong" />
+    <project path="build/make" name="AOSP-8916/build_make" revision="oreo8.1" remote="ME" >
+        <copyfile src="core/root.mk" dest="Makefile" />
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+    </project>
+    <project path="build/kati" name="AOSP-8916/build_kati" revision="oreo8.1" remote="ME" />
+    <project path="build/soong" name="AOSP-8916/build_soong" revision="oreo8.1" remote="ME" >
+        <linkfile src="root.bp" dest="Android.bp" />
+        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
+
+
+
+    <!-- REPOS TO REPLACE -->
+	  <remove-project name="device/asus/fugu" />
+  <remove-project name="device/asus/fugu-kernel" />
+  <remove-project name="device/generic/arm64" />
+  <remove-project name="device/generic/armv7-a-neon" />
+  <remove-project name="device/generic/common" />
+  <remove-project name="device/generic/goldfish" />
+  <remove-project name="device/generic/goldfish-opengl" />
+  <remove-project name="device/generic/mini-emulator-arm64" />
+  <remove-project name="device/generic/mini-emulator-armv7-a-neon" />
+  <remove-project name="device/generic/mini-emulator-mips" />
+  <remove-project name="device/generic/mini-emulator-mips64" />
+  <remove-project name="device/generic/mini-emulator-x86" />
+  <remove-project name="device/generic/mini-emulator-x86_64" />
+  <remove-project name="device/generic/qemu" />
+  <remove-project name="device/generic/x86" />
+  <remove-project name="device/generic/x86_64" />
+  <remove-project name="device/google/accessory/arduino" />
+  <remove-project name="device/google/accessory/demokit" />
+  <remove-project name="device/google/atv" />
+  <remove-project name="device/google/dragon" />
+  <remove-project name="device/google/dragon-kernel" />
+  <remove-project name="device/google/marlin" />
+  <remove-project name="device/google/marlin-kernel" />
+  <remove-project name="device/huawei/angler" />
+  <remove-project name="device/huawei/angler-kernel" />
+  <remove-project name="device/lge/bullhead" />
+  <remove-project name="device/lge/bullhead-kernel" />
+  <remove-project name="device/linaro/bootloader/OpenPlatformPkg" />
+  <remove-project name="device/linaro/bootloader/arm-trusted-firmware" />
+  <remove-project name="device/linaro/bootloader/edk2" />
+  <remove-project name="device/linaro/hikey" />
+  <remove-project name="device/linaro/hikey-kernel" />
+  <remove-project name="platform/hardware/intel/audio_media" />
+  <remove-project name="platform/hardware/intel/bootstub" />
+  <remove-project name="platform/hardware/intel/common/bd_prov" />
+  <remove-project name="platform/hardware/intel/common/libmix" />
+  <remove-project name="platform/hardware/intel/common/libstagefrighthw" />
+  <remove-project name="platform/hardware/intel/common/libva" />
+  <remove-project name="platform/hardware/intel/common/libwsbm" />
+  <remove-project name="platform/hardware/intel/common/omx-components" />
+  <remove-project name="platform/hardware/intel/common/utils" />
+  <remove-project name="platform/hardware/intel/common/wrs_omxil_core" />
+  <remove-project name="platform/hardware/intel/img/hwcomposer" />
+  <remove-project name="platform/hardware/intel/img/psb_headers" />
+  <remove-project name="platform/hardware/intel/img/psb_video" />
+  <remove-project name="platform/hardware/intel/sensors" />
+  <remove-project name="platform/hardware/marvell/bt" />
+  <remove-project name="platform/hardware/qcom/msm8960" />
+  <remove-project name="platform/hardware/qcom/msm8994" />
+  <remove-project name="platform/hardware/qcom/msm8996" />
+  <remove-project name="platform/hardware/qcom/msm8x26" />
+  <remove-project name="platform/hardware/qcom/msm8x27" />
+  <remove-project name="platform/hardware/qcom/msm8x84" />
+  <remove-project name="platform/prebuilts/android-emulator" />
+  <remove-project name="platform/prebuilts/clang/host/darwin-x86" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gdb/darwin-x86" />
+  <remove-project name="platform/prebuilts/go/darwin-x86" />
+  <remove-project name="platform/prebuilts/qemu-kernel" />
+    <remove-project name="platform/bionic" />
+    <remove-project name="platform/bootable/recovery" />
+    <remove-project name="platform/external/selinux" />
+    <remove-project name="platform/frameworks/av" />
+    <remove-project name="platform/frameworks/base" />
+    <remove-project name="platform/frameworks/native" />
+    <remove-project name="platform/hardware/interfaces" />
+    <remove-project name="platform/hardware/libhardware" />
+    <remove-project name="platform/hardware/libhardware_legacy" />
+    <remove-project name="platform/hardware/qcom/gps" />
+    <remove-project name="platform/hardware/qcom/wlan" />
+    <remove-project name="platform/packages/apps/Camera2" />
+    <remove-project name="platform/packages/apps/Gallery2" />
+    <remove-project name="platform/packages/apps/Settings" />
+    <remove-project name="platform/packages/inputmethods/LatinIME" />
+    <remove-project name="platform/packages/providers/MediaProvider" />
+    <remove-project name="platform/packages/services/Telephony" />
+    <remove-project name="platform/system/bt" />
+    <remove-project name="platform/system/core" />
+    <remove-project name="platform/system/media" />
+    <remove-project name="platform/system/sepolicy" />
+    <remove-project name="platform/system/vold" />
+	  <remove-project name="platform/external/tinycompress" />
+
+    <!-- REPLACED REPOS -->
+    <project path="bionic" name="AOSP-8916/bionic" revision="oreo8.1" remote="ME" />
+    <project path="bootable/recovery" name="AOSP-8916/bootable_recovery" revision="oreo8.1" remote="ME" />
+    <project path="external/selinux" name="AOSP-8916/external_selinux" revision="oreo8.1" remote="ME" />
+    <project path="frameworks/av" name="AOSP-8916/frameworks_av" revision="oreo8.1" remote="ME" />
+    <project path="frameworks/base" name="AOSP-8916/frameworks_base" revision="oreo8.1" remote="ME" />
+    <project path="frameworks/native" name="AOSP-8916/frameworks_native" revision="oreo8.1" remote="ME" />
+    <project path="hardware/interfaces" name="AOSP-8916/hardware_interfaces" revision="oreo8.1" remote="ME" />
+    <project path="hardware/libhardware" name="AOSP-8916/hardware_libhardware" revision="oreo8.1" remote="ME" />
+    <project path="hardware/libhardware_legacy" name="AOSP-8916/hardware_libhardware_legacy" revision="oreo8.1" remote="ME" />
+    <project path="hardware/qcom/fm" name="AOSP-8916/hardware_qcom_fm" revision="oreo8.1" remote="ME" />
+    <project path="hardware/qcom/gps" name="AOSP-8916/hardware_qcom_gps" revision="oreo8.1" remote="ME" />
+    <project path="packages/apps/Camera2" name="AOSP-8916/packages_apps_Camera2" revision="oreo8.1" remote="ME" />
+    <project path="packages/apps/Gallery2" name="AOSP-8916/packages_apps_Gallery2" revision="oreo8.1" remote="ME" />
+    <project path="packages/apps/Settings" name="AOSP-8916/packages_apps_Settings" revision="oreo8.1" remote="ME" />
+    <project path="packages/inputmethods/LatinIME" name="AOSP-8916/packages_inputmethods_LatinIME" revision="oreo8.1" remote="ME" />
+    <project path="packages/providers/MediaProvider" name="AOSP-8916/packages_providers_MediaProvider" revision="oreo8.1" remote="ME" />
+    <project path="packages/services/Telephony" name="AOSP-8916/packages_services_Telephony" revision="oreo8.1" remote="ME" />
+    <project path="system/bt" name="AOSP-8916/system_bt" revision="oreo8.1" remote="ME" />
+    <project path="system/core" name="AOSP-8916/system_core" revision="oreo8.1" remote="ME" />
+    <project path="system/media" name="AOSP-8916/system_media" revision="oreo8.1" remote="ME" />
+    <project path="system/qcom" name="AOSP-8916/system_qcom" remote="ME" revision="oreo8.1"  />
+    <project path="system/sepolicy" name="AOSP-8916/system_sepolicy" revision="oreo8.1" remote="ME" />
+    <project path="system/vold" name="AOSP-8916/system_vold" revision="oreo8.1" remote="ME" />
+
+  <project path="device/motorola/surnia" name="althafvly/lineage_device_motorola_osprey" revision="8.x" remote="ME" />
+  <project path="device/motorola/msm8916-common" name="althafvly/motorola_msm8916-common" revision="8.x" remote="ME"/>
+  <project path="kernel/motorola/msm8916" name="althafvly/android_kernel_motorola_msm8916"  revision="8.x" remote="ME" />
+  <project path="device/qcom/common" name="DroidFreak32/aosp_development_motorola8916_o" revision="device_qcom_common" remote="ME" />
+  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="ME" revision="lineage-15.0" />
+  <project path="vendor/motorola" name="althafvly/vendor_motorola" revision="8.x" remote="ME" />
+  <project path="external/tinycompress" name="LineageOS/android_external_tinycompress" remote="ME" revision="lineage-15.0"  />
+  <project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" remote="ME" revision="lineage-15.0"  />
+    <!-- HALs to replace -->
+    <remove-project name="platform/hardware/qcom/audio" />
+    <remove-project name="platform/hardware/qcom/bt" />
+    <remove-project name="platform/hardware/qcom/display" />
+    <remove-project name="platform/hardware/qcom/media" />
+    <remove-project name="platform/hardware/ril" />
+
+
+    <!-- Replaced HALs from External Orgs -->
+    <project path="hardware/qcom/bt-caf" name="LineageOS/android_hardware_qcom_bt" revision="lineage-15.0-caf" remote="ME" />
+    <project path="hardware/qcom/audio-caf/msm8916" name="ROM-FIXES/android_hardware_qcom_audio" revision="lineage-15.0-caf-8916" remote="ME" />
+    <project path="hardware/qcom/display-caf/msm8916" name="ROM-FIXES/android_hardware_qcom_display" revision="lineage-15.0-caf-8916" remote="ME" />
+    <project path="hardware/qcom/media-caf/msm8916" name="ROM-FIXES/android_hardware_qcom_media" revision="lineage-15.0-caf-8916" remote="ME" />
+    <project path="hardware/qcom/wlan-caf" name="AOSP-8916/hardware_qcom_wlan" revision="oreo8.1" remote="ME" />
+    <project path="hardware/ril-caf" name="AOSP-8916/hardware_ril-caf" revision="oreo8.1" remote="ME" />
+
+    <!-- Extra Dependency -->
+    <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" revision="lineage-15.0" remote="ME"  />
+</manifest>
